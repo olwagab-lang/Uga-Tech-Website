@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -37,7 +36,7 @@ p {
     margin: 10px 0;
 }
 
-/* ===== CONTAINER & UTILITIES ===== */
+/* CONTAINER & UTILITIES */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -56,7 +55,7 @@ p {
     margin: 2rem 0;
 }
 
-/* ===== NAVBAR ===== */
+/*NAVBAR */
 .navbar {
     background-color: #004643;
     color: #F0EDE5;
@@ -79,7 +78,6 @@ p {
     padding: 0 24px;
 }
 
-/* Logo with inline slogan */
 .navbar .logo {
     display: flex;
     align-items: center;
@@ -114,7 +112,7 @@ p {
     padding-left: 0.5rem;
 }
 
-/* Navigation links */
+
 .navbar ul {
     display: flex;
     align-items: center;
@@ -143,11 +141,26 @@ p {
     background-color: rgba(240, 237, 229, 0.2);
     color: #ffffff;
     border-bottom: 2px solid #F0EDE5;
+} 
+
+.checkbtn{
+    font-size: 20px;
+    color: white; 
+    float: right;
+    line-height: 0px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
 }
 
-/* ===== HERO SECTION ===== */
+#check{
+    display: none;
+}
+
+/*HERO SECTION */
 .hero-section {
     position: relative;
+     background-color: var(--primary-color);
     background-image: url('../images/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -324,7 +337,7 @@ p {
     transform: translateY(-2px);
 }
 
-/* ===== FACTS ===== */
+/* Facts Section */
 .facts {
     padding: 3rem 0;
     background-color: #F0EDE5;
@@ -371,8 +384,9 @@ p {
     line-height: 1.5;
 }
 
-/* ===== ABOUT PAGE ===== */
+/* About Page */
 .about-hero {
+     background-color: var(--primary-color);
     background: linear-gradient(145deg, #817553 0%, #ffffffad 100%);
     background-image: url(../images/about.jpg);
     background-size: cover;
@@ -415,7 +429,7 @@ p {
     margin-top: 0.5rem;
 }
 
-/* ===== TEAM ===== */
+/*My Team Section*/
 .team-member {
     text-align: center;
 }
@@ -454,7 +468,7 @@ p {
     margin: 0.5rem auto;
 }
 
-/* ===== IMAGE ROW (About) ===== */
+/*Image row section */
 .image-row {
     display: flex;
     flex-wrap: wrap;
@@ -485,7 +499,7 @@ p {
     font-style: italic;
 }
 
-/* ===== TIMELINE ===== */
+/*TIMELINE*/
 .timeline {
     display: flex;
     flex-direction: column;
@@ -508,7 +522,7 @@ p {
     font-size: 1.1rem;
 }
 
-/* ===== CITATIONS ===== */
+/*citations */
 .citations {
     background: #d0b569;
     padding: 1.5rem;
@@ -526,7 +540,7 @@ p {
     margin-left: 1.5rem;
 }
 
-/* ===== CONTACT ===== */
+/* Contact Section */
 .feedback .grid {
     grid-template-columns: 45% 55%;
     gap: 30px;
@@ -609,7 +623,7 @@ p {
     transform: scale(1.05);
 }
 
-/* ===== GALLERY ===== */
+/* Gallery Page */
 .gallery {
     padding: 2rem 0 3rem;
 }
@@ -656,7 +670,7 @@ p {
     font-style: italic;
 }
 
-/* ===== GRID SYSTEM (unified) ===== */
+/* Grid CSS */
 .grid {
     display: grid;
     gap: 2rem;
@@ -671,7 +685,7 @@ p {
     gap: 1.8rem;
 }
 
-/* ===== BUTTONS ===== */
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -734,7 +748,7 @@ p {
     background-color: #1B7F5C;
 }
 
-/* ===== FOOTER ===== */
+/* Footer section */
 .site-footer {
     background-color: #004643;
     color: #F0EDE5;
@@ -787,56 +801,107 @@ p {
     transform: scale(1.05);
 }
 
-/* ==========================================================
-   RESPONSIVE: MOBILE (max-width: 375px)
-   ========================================================== */
+/* Responsive Design*/
 @media (max-width: 375px) {
-    .container {
-        padding: 0 16px;
+ .container {
+        padding: 0 12px;
         max-width: 100%;
     }
 
-    /* Navbar */
+    /* ---- NAVBAR ---- */
     .navbar {
         height: auto;
-        padding: 12px 0;
+        padding: 6px 0;
     }
 
     .navbar .container {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        padding: 0 12px;
+    }
+
+    .navbar .logo {
+        flex: 1;
+        min-width: 0;
+        gap: 0.3rem;
     }
 
     .navbar .logo .logo-title {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+        flex-shrink: 1;
+        min-width: 0;
+        gap: 0.3rem;
     }
 
     .navbar .logo .logo-title i {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .navbar .logo .logo-tagline {
-        font-size: 0.7rem;
+        font-size: 0.55rem;
         white-space: normal;
         border-left: none;
         padding-left: 0;
+        flex-shrink: 1;
+        max-width: 80px;
+    }
+
+    .checkbtn {
+        display: block;
+        font-size: 20px;
+        padding: 2px 6px;
+        line-height: 1;
+        color: #F0EDE5;
+        cursor: pointer;
+        margin-right: 0;
+        float: none;
+        flex-shrink: 0;
+    }
+
+    .checkbtn:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.2rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
+        background-color: #004643;
+        padding: 0.5rem 0;
+        gap: 0.2rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        flex-wrap: nowrap;
+    }
+
+    #check:checked ~ ul {
+        display: flex;
     }
 
     .navbar ul li a {
-        font-size: 0.7rem;
-        padding: 6px 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 12px;
+        font-size: 0.75rem;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         letter-spacing: 0.3px;
     }
 
-    /* Hero */
+    .navbar ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .navbar ul li a.active {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-bottom: 2px solid #F0EDE5;
+    }
+
+    /* ---- HERO ---- */
     .hero-section {
         min-height: 70vh;
         padding: 2.5rem 1rem;
@@ -866,7 +931,7 @@ p {
         display: none;
     }
 
-    /* Intro card */
+    /* ---- INTRO CARD ---- */
     .intro-card {
         padding: 1.2rem;
         margin: 1rem 0;
@@ -881,7 +946,21 @@ p {
         font-size: 0.9rem;
     }
 
-    /* Grids */
+    /* ---- SERVICES ---- */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .services-heading h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-card {
+        padding: 1.5rem 1rem;
+    }
+
+    /* ---- GRIDS ---- */
     .grid-3,
     .grid-6 {
         grid-template-columns: 1fr;
@@ -904,7 +983,7 @@ p {
         font-size: 1.5rem;
     }
 
-    /* Buttons */
+    /* ---- BUTTONS ---- */
     .btn-next,
     .btn-back {
         width: 100%;
@@ -913,7 +992,7 @@ p {
         font-size: 0.9rem;
     }
 
-    /* About */
+    /* ---- ABOUT ---- */
     .about-hero {
         padding: 2rem 0;
     }
@@ -999,13 +1078,9 @@ p {
         margin-bottom: 0.3rem;
     }
 
-    /* Gallery */
+    /* ---- GALLERY ---- */
     .gallery-heading {
         font-size: 1.5rem;
-    }
-
-    .grid-6 {
-        gap: 1.2rem;
     }
 
     .gallery-img img {
@@ -1017,7 +1092,7 @@ p {
         padding: 0.6rem;
     }
 
-    /* Contact */
+    /* ---- CONTACT ---- */
     .feedback .grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1057,7 +1132,17 @@ p {
         font-size: 1.2rem;
     }
 
-    /* Footer */
+    /* ---- TEAM ---- */
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-bio {
+        max-width: 100%;
+    }
+
+    /* ---- FOOTER ---- */
     .site-footer {
         padding: 1.5rem 0;
         margin-top: 2rem;
@@ -1087,7 +1172,7 @@ p {
         font-size: 0.7rem;
     }
 
-    /* General */
+    /* ---- GENERAL TEXT ---- */
     p,
     li,
     .text-secondary {
@@ -1105,20 +1190,40 @@ p {
     h3 {
         font-size: 1.1rem;
     }
+}
 
-    .team-member img {
-        width: 120px;
-        height: 120px;
+@media (max-width: 768px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
-    .team-bio {
-        max-width: 100%;
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+  
+    .grid-6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .navbar .logo .logo-tagline {
+        white-space: normal;
+        border-left: none;
+        padding-left: 0;
+        font-size: 0.7rem;
+    }
+
+    .feedback .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 10px;
     }
 }
 
-/* ==========================================================
-   RESPONSIVE: DESKTOP (min-width: 1280px)
-   ========================================================== */
 @media (min-width: 1280px) {
     .container {
         max-width: 1200px;
